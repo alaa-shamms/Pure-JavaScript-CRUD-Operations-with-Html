@@ -1,0 +1,128 @@
+
+
+
+
+h2
+{
+    color: gray;
+    font-weight: 800;
+}
+#total
+{
+    background-color: tomato;
+    padding: 9px;
+    font-size: 18px;
+}
+
+#total::before
+{
+    content: 'Total:';
+    font-size: 18px;
+
+}
+
+
+body {
+
+    background-color: black;
+}
+
+ #add,#Clear,#update{
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 180px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 0.5em;
+    padding-bottom: 50px;
+}
+#update
+{
+    --c: rgb(38, 218, 32);
+}
+
+
+#add span,#Clear span,#update span 
+{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+#update span
+{
+    background-color: white;
+    width:20%;
+    height: 300px;
+
+}
+#add:hover,#Clear:hover,#update span {
+    color: black;
+}
+
+#add:hover span,#Clear:hover span,#update:hover span {
+    transform: translateY(0) scale(2);
+}
+
+#add span:nth-child(1),#Clear span:nth-child(1) ,#update span:nth-child(1) {
+    --n: 1;
+}
+
+#add span:nth-child(2),#Clear span:nth-child(2),#update span:nth-child(2) {
+    --n: 2;
+}
+
+#add span:nth-child(3),#Clear span:nth-child(3),#update span:nth-child(3) {
+    --n: 3;
+}
+
+#add span:nth-child(4),#Clear span:nth-child(4),#update span:nth-child(4) {
+    --n: 4;
+}
+
+
+
+.arrow-up
+{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   border: 2px solid red;
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   border-radius: 50%;
+}
+.arrow-up img
+{
+    width: 50px;
+    height: 50px;
+
+}
+
+#productPriceAlert,#productTaxsAlert,#productadsAlert,#productdiscountAlert
+{
+    width: 23.5%;
+    margin-right: 5px;
+}
